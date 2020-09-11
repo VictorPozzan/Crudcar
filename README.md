@@ -1,9 +1,11 @@
 # Crudcar
 
-Requisitos?
+Requisitos
 #Ter o NodeJs instalado
 #Ter o MySQL Server instalado, com uma entidade no banco chamada "crudcar" 
+
 -------------------------------------------------------------------------------
+
 #Instalar o NestJs
 npm i -g @nestjs/cli
 
