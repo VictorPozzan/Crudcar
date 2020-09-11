@@ -6,20 +6,20 @@ Requisitos
 
 -------------------------------------------------------------------------------
 
-#Instalar o NestJs
+#Instalar o NestJs:
 npm i -g @nestjs/cli
 
-#dependências necessárias
+#dependências necessárias:
 npm install --save @nestjs/typeorm typeorm mysql
 
 #Rodar o backend:
 npm run start:dev
 -------------------------------------------------------------------------------
 #Frontend
-#instalar o angular
+#instalar o angular:
 npm install -g @angular/cli
 
-#instalar o bootstrap
+#instalar o bootstrap:
 npm install bootstrap --save
 
 #Uma das formas de rodar o frontend:
