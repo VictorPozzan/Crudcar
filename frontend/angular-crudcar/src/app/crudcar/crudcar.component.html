@@ -1,0 +1,48 @@
+<p>crudcar works!</p>
+
+<div class="container mt-5">
+    <h1><i>CRUDCAR</i></h1>
+    <hr>
+
+
+    <div class="input-group mb-3 mt-5">
+        <input type="text" class="form-control" [(ngModel)]="crudcar.description" placeholder="Car description">
+        <div class="input-group-append">
+            <button class="btn btn-outline-success" (click)="crudcar.id == undefined ? create() : update(crudcar)" type="button">Save</button>
+        </div>
+    </div>
+
+
+    <div class="card mt-3">
+        <div class="card-header">
+            Car List
+            <button style="float:right" (click)="findAll()" class="btn btn-sm btn-outline-info">Refresh</button>
+        </div>
+        <div class="card-body">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let crudcar of crudcars">
+                        <th [ngStyle]="{'text-decoration-line': crudcar.done ? 'line-through' : ''}" scope="row">{{crudcar.id}}</th>
+                        <td [ngStyle]="{'text-decoration-line': crudcar.done ? 'line-through' : ''}">{{crudcar.description}}</td>
+                        <td>
+                            <button  (click)="done(crudcar)" class="btn btn-sm btn-primary">Done</button>
+                            <button  (click)="remove(crudcar.id)" style="margin-left: 5px;" class="btn btn-sm btn-danger">Delete</button>
+                            <button  (click)="prepareUpdate(crudcar)" style="margin-left: 5px;" class="btn btn-sm btn-secondary">Update</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+</div>
